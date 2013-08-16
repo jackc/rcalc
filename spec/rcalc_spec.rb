@@ -31,4 +31,9 @@ describe Rcalc do
   it 'raises error on unexpected operand' do
     expect{rcalc.compute '1 abc 2'}.to raise_error(ArgumentError)
   end
+
+  it 'computes when expression has no spaces between tokens' do
+    answer = rcalc.compute '1+1'
+    expect(answer).to eq 2
+  end
 end
