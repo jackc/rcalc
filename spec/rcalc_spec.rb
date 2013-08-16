@@ -36,4 +36,9 @@ describe Rcalc do
     answer = rcalc.compute '1+1'
     expect(answer).to eq 2
   end
+
+  it 'computes with order of operations' do
+    answer = rcalc.compute '1 + 1 * 2'
+    expect(answer).to eq 3
+  end
 end
