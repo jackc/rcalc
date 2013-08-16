@@ -1,7 +1,11 @@
+require 'timeout'
+
 class Rcalc
   def compute(expression)
     sanitize! expression
-    eval expression
+    Timeout.timeout 0.1, ArgumentError do
+      eval expression
+    end
   rescue SyntaxError
     raise ArgumentError
   end
