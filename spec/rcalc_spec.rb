@@ -7,7 +7,7 @@ describe Rcalc do
     expect(rcalc.compute('1')).to eq 1
   end
 
-  it 'computes addition' do
+  it 'computes addition of integers' do
     rcalc = Rcalc.new
     answer = rcalc.compute '1 + 1'
     expect(answer).to eq 2
