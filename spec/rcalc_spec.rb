@@ -50,4 +50,8 @@ describe Rcalc do
     answer = rcalc.compute '(1 + 1) * 2'
     expect(answer).to eq 4
   end
+
+  it 'stops too long calculations' do
+    expect{rcalc.compute '9999**999999'}.to raise_error(ArgumentError)
+  end
 end
