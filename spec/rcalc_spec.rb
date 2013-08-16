@@ -22,4 +22,9 @@ describe Rcalc do
     answer = rcalc.compute '3 * 4'
     expect(answer).to eq 12
   end
+
+  it 'computes division of integers' do
+    answer = rcalc.compute '20 / 4'
+    expect(answer).to eq 5
+  end
 end
