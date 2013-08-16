@@ -10,6 +10,8 @@ class Rcalc
 
       if %w[+ - * /].include? operand
         left.send(operand, right)
+      else
+        raise ArgumentError
       end
     end
   end
