@@ -45,4 +45,9 @@ describe Rcalc do
   it 'raises error on evil input' do
     expect{rcalc.compute 'exit 1'}.to raise_error(ArgumentError)
   end
+
+  it 'computes order of operations with parenthesis' do
+    answer = rcalc.compute '(1 + 1) * 2'
+    expect(answer).to eq 4
+  end
 end
