@@ -4,7 +4,13 @@ class Rcalc
     if tokens.size == 1
       tokens.first.to_i
     else
-      tokens.first.to_i + tokens.last.to_i
+      left, operand, right = tokens
+      case operand
+      when '+'
+        left.to_i + right.to_i
+      when '-'
+        left.to_i - right.to_i
+      end
     end
   end
 end
