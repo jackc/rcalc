@@ -8,15 +8,8 @@ class Rcalc
       operand = tokens[1]
       right = tokens[2].to_i
 
-      case operand
-      when '+'
-        left + right
-      when '-'
-        left - right
-      when '*'
-        left * right
-      when '/'
-        left / right
+      if %w[+ - * /].include? operand
+        left.send(operand, right)
       end
     end
   end
