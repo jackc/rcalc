@@ -1,6 +1,6 @@
 class Rcalc
   def compute(expression)
-    tokens = expression.split
+    tokens = tokenize(expression)
     if tokens.size == 1
       tokens.first.to_i
     else
@@ -14,5 +14,9 @@ class Rcalc
         raise ArgumentError
       end
     end
+  end
+
+  def tokenize(expression)
+    expression.split
   end
 end
