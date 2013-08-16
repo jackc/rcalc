@@ -17,6 +17,6 @@ class Rcalc
   end
 
   def tokenize(expression)
-    expression.split
+    expression.scan /\d+|[+\-*\/]/
   end
 end
