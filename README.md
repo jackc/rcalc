@@ -1,3 +1,3 @@
 # RCalc
 
-Demo project for RSpec
+Demo project for RSpec tutorial presentation
