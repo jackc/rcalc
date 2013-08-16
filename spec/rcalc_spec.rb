@@ -27,4 +27,8 @@ describe Rcalc do
     answer = rcalc.compute '20 / 4'
     expect(answer).to eq 5
   end
+
+  it 'raises error on unexpected operand' do
+    expect{rcalc.compute '1 abc 2'}.to raise_error(ArgumentError)
+  end
 end
