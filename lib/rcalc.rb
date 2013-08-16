@@ -9,6 +9,6 @@ class Rcalc
   private
 
   def sanitize! expression
-    raise ArgumentError unless expression =~ /\A[ 0-9+\-*\/]+\Z/
+    raise ArgumentError unless expression =~ /\A[ 0-9+\-*\/()]+\Z/
   end
 end
