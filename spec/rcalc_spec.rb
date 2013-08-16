@@ -17,4 +17,9 @@ describe Rcalc do
     answer = rcalc.compute '2 - 1'
     expect(answer).to eq 1
   end
+
+  it 'computes multiplication of integers' do
+    answer = rcalc.compute '3 * 4'
+    expect(answer).to eq 12
+  end
 end
