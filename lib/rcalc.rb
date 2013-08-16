@@ -10,6 +10,8 @@ class Rcalc
         left.to_i + right.to_i
       when '-'
         left.to_i - right.to_i
+      when '*'
+        left.to_i * right.to_i
       end
     end
   end
