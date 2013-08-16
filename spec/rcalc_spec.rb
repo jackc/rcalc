@@ -12,4 +12,10 @@ describe Rcalc do
     answer = rcalc.compute '1 + 1'
     expect(answer).to eq 2
   end
+
+  it 'computes subtraction of integers' do
+    rcalc = Rcalc.new
+    answer = rcalc.compute '2 - 1'
+    expect(answer).to eq 1
+  end
 end
